@@ -40,11 +40,11 @@ func TestReadStation(t *testing.T) {
 		t.Run(tc.name, func(t *testing.T) {
 			client := mustCCClient(t, tc.scopes)
 
-			resp, body, err := client.GetStationData(context.Background(), "", false)
+			resp, err := client.GetStationData(context.Background(), "", false)
 			if err != nil {
 				t.Error(err)
 			}
-			t.Logf("Status: %s  Body: %s", resp.Status, string(body))
+			t.Logf("Status: %s  Response: %#v", resp.Status, resp)
 		})
 	}
 }

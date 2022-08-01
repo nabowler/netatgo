@@ -52,7 +52,7 @@ type (
 		Pressure         float64 `json:"Pressure"`
 		AbsolutePressure float64 `json:"AbsolutePressure"`
 		MinTemp          float64 `json:"min_temp"`
-		MaxTemp          int64   `json:"max_temp"`
+		MaxTemp          float64 `json:"max_temp"`
 		DateMaxTemp      int64   `json:"date_max_temp"`
 		DateMinTemp      int64   `json:"date_min_temp"`
 		TempTrend        string  `json:"temp_trend"`
